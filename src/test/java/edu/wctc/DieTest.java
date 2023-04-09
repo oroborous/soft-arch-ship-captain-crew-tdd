@@ -1,19 +1,25 @@
 package edu.wctc;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class DieTest {
+    private Die die;
+
+    @BeforeEach
+    public void setup() {
+        die = new Die();
+    }
+
     @Test
     public void canRollDie() {
-        Die die = new Die();
         die.roll();
     }
 
     @Test
     public void rollValueInRange() {
-        Die die = new Die();
         for (int i = 0; i < 100; i++) {
             die.roll();
             int faceValue = die.getFaceValue();
@@ -24,7 +30,6 @@ public class DieTest {
 
     @Test
     public void canHold() {
-        Die die = new Die();
         die.roll();
         die.hold();
 
