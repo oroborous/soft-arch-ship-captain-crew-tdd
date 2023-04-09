@@ -21,4 +21,14 @@ public class DieTest {
                     String.format("Face value (%d) should be between 1 and 6", faceValue));
         }
     }
+
+    @Test
+    public void canHold() {
+        Die die = new Die();
+        die.roll();
+        die.hold();
+
+        assertTrue(die.isHeld(), "Die should be held when instructed");
+
+    }
 }
