@@ -24,6 +24,7 @@ public class Die {
     }
 
     public void roll() {
-        faceValue = random.nextInt(1, 7);
+        if (!isHeld)
+            faceValue = random.nextInt(1, 7);
     }
 }
