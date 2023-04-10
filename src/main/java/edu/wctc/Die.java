@@ -5,7 +5,7 @@ import java.util.Random;
 public class Die {
     private int faceValue;
     private boolean isHeld;
-    private Random random = new Random();
+    private final Random random = new Random();
 
     public Die() {
         roll();

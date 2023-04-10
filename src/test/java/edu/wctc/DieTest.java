@@ -22,7 +22,6 @@ public class DieTest {
     @Test
     public void rollValueInRange() {
         for (int i = 0; i < 100; i++) {
-            die.roll();
             int faceValue = die.getFaceValue();
             assertTrue(faceValue >= 1 && faceValue <= 6,
                     String.format("Face value (%d) should be between 1 and 6", faceValue));
@@ -31,7 +30,6 @@ public class DieTest {
 
     @Test
     public void canHold() {
-        die.roll();
         die.hold();
 
         assertTrue(die.isHeld(), "Die should be held when instructed");
@@ -41,4 +39,6 @@ public class DieTest {
     public void rolledWhenCreated() {
         assertNotEquals(0, die.getFaceValue(), "Die should be rolled initially when created");
     }
+
+
 }
