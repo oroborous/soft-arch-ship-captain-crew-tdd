@@ -6,6 +6,11 @@ public class Die {
     private int faceValue;
     private boolean isHeld;
     private Random random = new Random();
+
+    public Die() {
+        roll();
+    }
+
     public int getFaceValue() {
         return faceValue;
     }

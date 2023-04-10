@@ -3,6 +3,7 @@ package edu.wctc;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class DieTest {
@@ -34,6 +35,10 @@ public class DieTest {
         die.hold();
 
         assertTrue(die.isHeld(), "Die should be held when instructed");
+    }
 
+    @Test
+    public void rolledWhenCreated() {
+        assertNotEquals(0, die.getFaceValue(), "Die should be rolled initially when created");
     }
 }
